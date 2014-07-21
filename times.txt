@@ -1,0 +1,26 @@
+it scales!
+
+GO:
+1.) 0.021196755s/MB (input 49.3 MB)
+2.) 0.021084058s/MB (input 172.5 MB)
+3.) 0.020297271s/MB (input 205.2 MB)
+4.) 0.022603175s/MB (input 650 MB)
+ø 0.02129531s/MB
+
+UNIX:
+1.) 0.079695740s/MB
+2.) 0.075982609s/MB
+3.) 0.076125731s/MB
+4.) 0.076920000s/MB 
+ø 0.07718102s/MB
+
+NODE:
+1.) 0.062068966s/MB
+2.) 0.095501449s/MB
+3.) 0.068031189s/MB
+4.) 0.210769231s/MB
+ø 0.10909271s/MB
+
+The node reducer lags!!!
+Will have to focus on it but on the other hand, why not having one "slower" task
+Actually, I have to because the mapper is faster than UNIX.

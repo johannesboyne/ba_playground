@@ -5,6 +5,7 @@ import (
   "bufio"
   "fmt"
   "sort"
+  "math"
 )
 
 type UrlHash struct {
@@ -31,7 +32,10 @@ func main() {
     keys = append(keys, UrlHash{key, path_hash[key]})
   }
   sort.Sort(ByCount(keys))
-  for k := range keys[0:20] {
+
+  min := int(math.Min(float64(len(keys)), 20))
+
+  for k := range keys[0:min] {
     fmt.Println(keys[k].Count, keys[k].Url)
   }
 }
